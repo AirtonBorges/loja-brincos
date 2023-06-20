@@ -1,0 +1,11 @@
+{
+    "name": "@deno/loja-brincos",
+    "type": "module",
+    "scripts": {
+      "dev": "deno run --allow-env --allow-sys main.ts"
+    },
+    "dependencies": {
+      "vuetify": "^3.3.4",
+      "material-design-icons-iconfont": "^6.7.0"
+    }
+  }
