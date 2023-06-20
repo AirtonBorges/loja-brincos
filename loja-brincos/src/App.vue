@@ -21,13 +21,10 @@ export default {
       color="red-darken-3"
       class="d-flex justify-space-between"
     >
-      <v-img
-        :height="50"
-        :max-width="200"
-        :min-width="200"
-        src="https://logodownload.org/wp-content/uploads/2014/09/google-logo-1-768x251.png"
-      >
-      </v-img>
+      <img id="logo"
+        width="150"
+        src="./assets/LOJA_BRANCA_HORIZ.webp"
+      />
       <v-spacer></v-spacer>
       <v-expand-transition>
         <v-tabs
@@ -67,5 +64,8 @@ export default {
 </template>
 
 <style scoped>
+  #logo {
+    margin-left: 50px;
+  }
 
 </style>
