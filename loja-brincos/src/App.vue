@@ -2,6 +2,7 @@
 import BarraNavegacao from './components/BarraNavegacao.vue'
 import Produtos from './components/Produtos.vue'
 import Personalizado from './components/Personalizado.vue'
+
 export default {
   components: {
     BarraNavegacao,
@@ -9,20 +10,22 @@ export default {
     Personalizado
   },
   data: () => ({
-    tab: 0,
+    tab: 1,
   }),
   methods: {
     mudarJanela(tab: number) {
-      console.log(tab);
       this.tab = tab;
     }
-  }
+  },
+  mounted() {
+    this.mudarJanela(0);
+  },
 }
 </script>
 
 <template>
   <v-app>
-    <BarraNavegacao @clicou-tab="mudarJanela"></BarraNavegacao>
+    <BarraNavegacao @clicou-tab="(mudarJanela)"></BarraNavegacao>
     <v-window id="window" v-model="tab">
       <v-window-item value="0" key="0">
         <Produtos></Produtos>

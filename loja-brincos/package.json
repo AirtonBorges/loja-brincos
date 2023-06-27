@@ -9,7 +9,7 @@
       "material-design-icons-iconfont": "^6.7.0",
       "@mdi/font": "^7.2.96",
       "css-loader": "^6.8.1",
-      "vue-router": "^4.2.2",
-      "vee-validate": "^4.10.2"
+      "vee-validate": "^4.10.2",
+      "dotenv": "^16.3.1"
     }
   }

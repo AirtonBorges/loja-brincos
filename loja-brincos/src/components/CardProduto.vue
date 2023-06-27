@@ -26,6 +26,7 @@
             block
             rounded="lg"
             width="100%"
+            @click.stop="onclick"
           >
             Tenho interesse
           </v-btn>
@@ -39,6 +40,11 @@
         produto: { type: String, required: true },
         preco: { type: Number, required: true },
     })
+    
+    function onclick() {
+      const texto = `Estou interessado no ${props.produto}`
+      window.location.href = `https://wa.me//47988610641?text=${texto}`;
+    }
 </script>
 
 <style scoped>

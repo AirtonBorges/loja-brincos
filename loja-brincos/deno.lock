@@ -6,6 +6,7 @@
       "@mdi/font@^7.2.96": "@mdi/font@7.2.96",
       "@vitejs/plugin-vue@^4.2.3": "@vitejs/plugin-vue@4.2.3_vite@4.3.9_vue@3.3.4",
       "css-loader@^6.8.1": "css-loader@6.8.1_webpack@5.88.0__acorn@8.9.0_postcss@8.4.24",
+      "dotenv@^16.3.1": "dotenv@16.3.1",
       "material-design-icons-iconfont@^6.7.0": "material-design-icons-iconfont@6.7.0",
       "vee-validate@^4.10.2": "vee-validate@4.10.2_vue@3.3.4",
       "vite": "vite@4.3.9",
@@ -451,6 +452,10 @@
       },
       "csstype@3.1.2": {
         "integrity": "sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==",
+        "dependencies": {}
+      },
+      "dotenv@16.3.1": {
+        "integrity": "sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==",
         "dependencies": {}
       },
       "electron-to-chromium@1.4.440": {

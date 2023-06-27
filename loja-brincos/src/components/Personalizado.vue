@@ -48,7 +48,7 @@
   </v-layout>
 </template>
 <script setup>
-  import { useField, useForm } from 'vee-validate'
+  import { useField, useForm } from 'vee-validate';
   const { handleSubmit } = useForm({
     validationSchema: {
       nome(value) {
@@ -69,7 +69,7 @@
 
   const submit = handleSubmit(() => {
     const texto = `${nome.value.value}, de ${cidade.value.value}: ${descricao.value.value}`
-    window.location.href = `https://wa.me//1232131332?text=${texto}`;
+    window.location.href = `https://wa.me//47988610641?text=${texto}`;
   })
 </script>
 

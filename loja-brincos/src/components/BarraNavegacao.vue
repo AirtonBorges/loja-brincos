@@ -30,8 +30,8 @@
       id="icones"
       class="d-flex justify-space-between align-center"
     >
-      <v-btn size="x-large" density="compact" icon="mdi-whatsapp"></v-btn>
-      <v-btn size="x-large" density="compact" icon="mdi-instagram"></v-btn>
+      <v-btn href="https://wa.me//47988610641" size="x-large" density="compact" icon="mdi-whatsapp"></v-btn>
+      <v-btn href="https://www.instagram.com/luma_biscuits/" size="x-large" density="compact" icon="mdi-instagram"></v-btn>
       <v-expand-transition>
         <v-app-bar-nav-icon
           class="icone"
