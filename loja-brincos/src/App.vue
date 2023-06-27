@@ -38,6 +38,10 @@ export default {
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.application {
+  font-family: "Montserrat";
+}
   #logo {
     margin-left: 35px;
   }
