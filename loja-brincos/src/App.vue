@@ -1,63 +1,34 @@
 <script lang="ts">
+import BarraNavegacao from './components/BarraNavegacao.vue'
+import Produtos from './components/Produtos.vue'
+import Personalizado from './components/Personalizado.vue'
 export default {
+  components: {
+    BarraNavegacao,
+    Produtos,
+    Personalizado
+  },
   data: () => ({
-    tab: null,
-    colapsarBarra: false,
+    tab: 0,
   }),
   methods: {
-    onResize(){
-      this.colapsarBarra = window.innerWidth < 768;
-      console.log(this.colapsarBarra)
+    mudarJanela(tab: number) {
+      console.log(tab);
+      this.tab = tab;
     }
-  },
+  }
 }
 </script>
 
 <template>
   <v-app>
-    <v-app-bar
-      v-resize="onResize"
-      flat
-      color="red-darken-3"
-      class="d-flex justify-space-between"
-    >
-      <img id="logo"
-        width="150"
-        src="./assets/LOJA_BRANCA_HORIZ.webp"
-      />
-      <v-spacer></v-spacer>
-      <v-expand-transition>
-        <v-tabs
-          v-if="!colapsarBarra"
-          v-model="tab"
-        >
-          <v-tab>Brincos</v-tab>
-          <v-tab>Pulseiras</v-tab>
-          <v-tab>Personalização</v-tab>
-        </v-tabs>
-      </v-expand-transition>
-      <v-expand-transition>
-        <v-app-bar-nav-icon
-          icon="mdi-dots-vertical"
-          v-if="colapsarBarra"
-        >
-          ...
-        </v-app-bar-nav-icon>
-      </v-expand-transition>
-    </v-app-bar>
-    <v-window v-model="tab">
-      <v-window-item v-for="n in 3" :key="n" :value="n">
-        <v-container fluid>
-          <v-row>
-            <v-col v-for="i in 6" :key="i" cols="12" md="4">
-              <v-img
-                :src="`https://picsum.photos/500/300?image=${i * n * 5 + 10}`"
-                :lazy-src="`https://picsum.photos/10/6?image=${i * n * 5 + 10}`"
-                aspect-ratio="1"
-              ></v-img>
-            </v-col>
-          </v-row>
-        </v-container>
+    <BarraNavegacao @clicou-tab="mudarJanela"></BarraNavegacao>
+    <v-window id="window" v-model="tab">
+      <v-window-item value="0" key="0">
+        <Produtos></Produtos>
+      </v-window-item>
+      <v-window-item value="1" key="1">
+        <Personalizado></Personalizado>
       </v-window-item>
     </v-window>
   </v-app>
@@ -65,7 +36,12 @@ export default {
 
 <style scoped>
   #logo {
-    margin-left: 50px;
+    margin-left: 35px;
   }
-
+  #barra {
+    padding: 0 10px;
+  }
+  #window {
+    margin-top: 65px;
+  }
 </style>
